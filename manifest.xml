@@ -1,5 +1,5 @@
 <package version="0.0">
-  <name>org.openxtalk.widget.tile</name>
+  <name>org.openxtalk.widget.tileplus</name>
   <title>Tile+</title>
   <author>OpemXTalk.org, LiveCode Ltd</author>
   <version>1.0.0</version>
@@ -20,7 +20,7 @@
   <requires name="com.livecode.engine"/>
   <metadata key="preferredSize">200,200</metadata>
   <metadata key="userVisible">true</metadata>
-  <metadata key="_ide">true</metadata>
+  <metadata key="_ide">false</metadata>
   <metadata key="sourceColor.editor">com.livecode.pi.color</metadata>
   <metadata key="sourceColor.default">blue</metadata>
   <metadata key="tileLabel.editor">com.livecode.pi.string</metadata>
@@ -64,6 +64,20 @@
   <metadata key="outerShadowSize.min">0</metadata>
   <metadata key="outerShadowSize.max">255</metadata>
   <metadata key="outerShadowSize.section">Effects</metadata>
+  <metadata key="textFont.user_visible">false</metadata>
+  <metadata key="textSize.user_visible">false</metadata>
+  <property name="labelTextFont" get="string" set="string"/>
+  <metadata key="labelTextFont.editor">com.livecode.pi.font</metadata>
+  <metadata key="labelTextFont.default">Helvetica</metadata>
+  <metadata key="labelTextFont.section">Text</metadata>
+  <metadata key="labelTextFont.label">Label Text Font</metadata>
+  <property name="labelTextSize" get="number" set="number"/>
+  <metadata key="labelTextSize.editor">com.livecode.pi.number</metadata>
+  <metadata key="labelTextSize.default">12</metadata>
+  <metadata key="labelTextSize.section">Text</metadata>
+  <metadata key="labelTextSize.label">Label Text Size</metadata>
+  <handler name="OnSave" parameters="out array" return="any"/>
+  <handler name="OnLoad" parameters="in array" return="any"/>
   <handler name="onCreate" parameters="" return="any"/>
   <handler name="OnPaint" parameters="" return="any"/>
   <handler name="setTileLabel" parameters="in string" return="nothing"/>

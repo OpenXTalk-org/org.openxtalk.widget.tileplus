@@ -48,8 +48,7 @@ Syntax: mouseLeave
 
 Type: message
 */
-widget org.openxtalk.widget.tile
--- widget com.livecode.widget.tile
+widget org.openxtalk.widget.tileplus
 
 use com.livecode.canvas
 use com.livecode.widget
@@ -62,7 +61,7 @@ metadata author is "OpemXTalk.org, LiveCode Ltd"
 metadata version is "1.0.0"
 metadata preferredSize is "200,200"
 metadata userVisible is "true"
-metadata _ide is "true"
+metadata _ide is "false"
 
 metadata sourceColor.editor is "com.livecode.pi.color"
 metadata sourceColor.default is "blue"
@@ -232,6 +231,43 @@ private handler setOuterShadowSize(in pNumber as Number) returns nothing
    redraw all
 end handler
 
+-- property textFont get mFont set setTextFont
+-- metadata textFont.editor is "com.livecode.pi.font"
+-- metadata textFont.default     is "Helvetica"
+metadata textFont.user_visible is "false"
+-- private variable mFont as String
+metadata textSize.user_visible is "false"
+
+property labelTextFont get mFont set setTextFont
+metadata labelTextFont.editor is "com.livecode.pi.font"
+metadata labelTextFont.default     is "Helvetica"
+metadata labelTextFont.section is "Text"
+metadata labelTextFont.label is "Label Text Font"
+private variable mFont as String
+
+property labelTextSize get mFontSize set setTextFontSize
+metadata labelTextSize.editor is "com.livecode.pi.number"
+metadata labelTextSize.default     is "12"
+metadata labelTextSize.section is "Text"
+metadata labelTextSize.label is "Label Text Size"
+private variable mFontSize as Number
+
+--property textAlign get mAlign	 set setAlign
+--metadata textAlign.editor is "com.livecode.pi.enum"
+--metadata textAlign.options is "top left,top center,top right,center left,center center,center right,bottom left,bottom center,bottom right,"
+--metadata textAlign.default is "center center"
+--metadata textAlign.section is "Text"
+--private variable mAlign as String
+
+private handler setTextFont(in pText as String)
+	put pText into mFont
+	redraw all
+end handler
+
+private handler setTextFontSize(in pNum as Number)
+	put pNum into mFontSize
+	redraw all
+end handler
 
 //Local variables
 private variable mTileLabel as String
@@ -244,6 +280,25 @@ private variable mForegroundColor as Color
 private variable mForegroundHoverColor as Color
 private variable mBackgroundColor as Color
 private variable mBackgroundHoverColor as Color
+
+----NEEDED handler, saves the properties of the sidget when stack is saved
+public handler OnSave(out rProperties as Array)
+	put the empty array into rProperties
+	-- put mText into rProperties["someText"]
+	-- put mBorder into rProperties["boxBorder"]
+	put mFontSize into rProperties["textSize"]
+	-- put mAlign into rProperties["textAlign"]
+	put mFont into rProperties["textFont"]
+end handler
+
+----NEEDED handler, loads the saved properties
+public handler OnLoad(in pProperties as Array)
+	-- put pProperties["someText"] into mText
+	--put pProperties["boxBorder"] into mBorder
+	--put pProperties["textAlign"] into mAlign
+	put pProperties["textSize"] into mFontSize
+	put pProperties["textFont"] into mFont
+end handler
 
 public handler onCreate()
     put "Label" into mTileLabel
@@ -310,6 +365,8 @@ public handler OnPaint()
      else
         set the paint of this canvas to solid paint with mForegroundColor
      end if
+     set the font of this canvas to font mFont at size mFontSize
+
      fill text mTileLabel at center of rectangle [0, (tHeight*0.7)-5, tWidth, tHeight-5] on this canvas
 
 
