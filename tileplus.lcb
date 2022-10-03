@@ -56,7 +56,7 @@ use com.livecode.engine
 use com.livecode.library.iconsvg
 use com.livecode.library.widgetutils
 
-metadata title is "Tile+"
+metadata title is "Tile Plus"
 metadata author is "OpemXTalk.org, LiveCode Ltd"
 metadata version is "1.0.0"
 metadata preferredSize is "200,200"
