@@ -171,7 +171,7 @@ property bgHoverColor get mBackgroundHoverColor set setBackgroundHoverColor
 private variable mInnerShadowAngle as Number
 property innerShadowAngle get mInnerShadowAngle  set setOuterShadowAngle
 metadata innerShadowAngle.editor is "com.livecode.pi.number"
-metadata innerShadowAngle.label is "Outer Shadow angle"
+metadata innerShadowAngle.label is "Inner Shadow angle"
 metadata innerShadowAngle.step is "1"
 metadata innerShadowAngle.default is "105"
 metadata innerShadowAngle.min is "0"
@@ -189,7 +189,7 @@ end handler
 private variable mInnerShadowDistance	as Number
 property innerShadowDistance	 get mInnerShadowDistance	  set setOuterShadowDistance
 metadata innerShadowDistance.editor is "com.livecode.pi.number"
-metadata innerShadowDistance.label is "Outer Shadow distance"
+metadata innerShadowDistance.label is "Inner Shadow distance"
 metadata innerShadowDistance.step is "1"
 metadata innerShadowDistance.default is "7"
 metadata innerShadowDistance.min is "0"
@@ -203,7 +203,7 @@ end handler
 private variable mInnerShadowColor	as Color
 property innerShadowColor get getOuterShadowColor  set setOuterShadowColor
 metadata innerShadowColor.editor is "com.livecode.pi.color"
-metadata innerShadowColor.label is "Outer Shadow color"
+metadata innerShadowColor.label is "Inner Shadow color"
 metadata innerShadowColor.section is "Effects"
 private handler setOuterShadowColor(in pColor as String) returns nothing
    put stringToColor(pColor) into mInnerShadowColor
@@ -220,7 +220,7 @@ private variable mInnerShadowSize	as Number
 property innerShadowSize	 get mInnerShadowSize	  set setOuterShadowSize
 metadata innerShadowSize.editor is "com.livecode.pi.number"
 metadata innerShadowSize.section is "Effects"
-metadata innerShadowSize.label is "Outer Shadow size"
+metadata innerShadowSize.label is "Inner Shadow size"
 metadata innerShadowSize.step is "1"
 metadata innerShadowSize.default is "15"
 metadata innerShadowSize.min is "0"
