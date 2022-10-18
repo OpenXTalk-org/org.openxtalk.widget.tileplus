@@ -1,6 +1,6 @@
 <package version="0.0">
   <name>org.openxtalk.widget.tileplus</name>
-  <title>Tile+</title>
+  <title>Tile Plus</title>
   <author>OpemXTalk.org, LiveCode Ltd</author>
   <version>1.0.0</version>
   <license>community</license>
@@ -20,7 +20,6 @@
   <requires name="com.livecode.engine"/>
   <metadata key="preferredSize">200,200</metadata>
   <metadata key="userVisible">true</metadata>
-  <metadata key="_ide">false</metadata>
   <metadata key="sourceColor.editor">com.livecode.pi.color</metadata>
   <metadata key="sourceColor.default">blue</metadata>
   <metadata key="tileLabel.editor">com.livecode.pi.string</metadata>
@@ -35,35 +34,35 @@
   <property name="fgHoverColor" get="Color" set="string"/>
   <property name="bgColor" get="Color" set="string"/>
   <property name="bgHoverColor" get="Color" set="string"/>
-  <property name="outerShadowAngle" get="number" set="number"/>
-  <metadata key="outerShadowAngle.editor">com.livecode.pi.number</metadata>
-  <metadata key="outerShadowAngle.label">Outer Shadow angle</metadata>
-  <metadata key="outerShadowAngle.step">1</metadata>
-  <metadata key="outerShadowAngle.default">105</metadata>
-  <metadata key="outerShadowAngle.min">0</metadata>
-  <metadata key="outerShadowAngle.max">359</metadata>
-  <metadata key="outerShadowAngle.section">Effects</metadata>
-  <property name="outerShadowDistance" get="number" set="number"/>
-  <metadata key="outerShadowDistance.editor">com.livecode.pi.number</metadata>
-  <metadata key="outerShadowDistance.label">Outer Shadow distance</metadata>
-  <metadata key="outerShadowDistance.step">1</metadata>
-  <metadata key="outerShadowDistance.default">7</metadata>
-  <metadata key="outerShadowDistance.min">0</metadata>
-  <metadata key="outerShadowDistance.max">255</metadata>
-  <metadata key="outerShadowDistance.section">Effects</metadata>
-  <property name="outerShadowColor" get="string" set="string"/>
-  <metadata key="outerShadowColor.editor">com.livecode.pi.color</metadata>
-  <metadata key="outerShadowColor.label">Outer Shadow color</metadata>
-  <metadata key="outerShadowColor.section">Effects</metadata>
-  <property name="outerShadowSize" get="number" set="number"/>
-  <metadata key="outerShadowSize.editor">com.livecode.pi.number</metadata>
-  <metadata key="outerShadowSize.section">Effects</metadata>
-  <metadata key="outerShadowSize.label">Outer Shadow size</metadata>
-  <metadata key="outerShadowSize.step">1</metadata>
-  <metadata key="outerShadowSize.default">15</metadata>
-  <metadata key="outerShadowSize.min">0</metadata>
-  <metadata key="outerShadowSize.max">255</metadata>
-  <metadata key="outerShadowSize.section">Effects</metadata>
+  <property name="innerShadowAngle" get="number" set="number"/>
+  <metadata key="innerShadowAngle.editor">com.livecode.pi.number</metadata>
+  <metadata key="innerShadowAngle.label">Outer Shadow angle</metadata>
+  <metadata key="innerShadowAngle.step">1</metadata>
+  <metadata key="innerShadowAngle.default">105</metadata>
+  <metadata key="innerShadowAngle.min">0</metadata>
+  <metadata key="innerShadowAngle.max">359</metadata>
+  <metadata key="innerShadowAngle.section">Effects</metadata>
+  <property name="innerShadowDistance" get="number" set="number"/>
+  <metadata key="innerShadowDistance.editor">com.livecode.pi.number</metadata>
+  <metadata key="innerShadowDistance.label">Outer Shadow distance</metadata>
+  <metadata key="innerShadowDistance.step">1</metadata>
+  <metadata key="innerShadowDistance.default">7</metadata>
+  <metadata key="innerShadowDistance.min">0</metadata>
+  <metadata key="innerShadowDistance.max">255</metadata>
+  <metadata key="innerShadowDistance.section">Effects</metadata>
+  <property name="innerShadowColor" get="string" set="string"/>
+  <metadata key="innerShadowColor.editor">com.livecode.pi.color</metadata>
+  <metadata key="innerShadowColor.label">Outer Shadow color</metadata>
+  <metadata key="innerShadowColor.section">Effects</metadata>
+  <property name="innerShadowSize" get="number" set="number"/>
+  <metadata key="innerShadowSize.editor">com.livecode.pi.number</metadata>
+  <metadata key="innerShadowSize.section">Effects</metadata>
+  <metadata key="innerShadowSize.label">Outer Shadow size</metadata>
+  <metadata key="innerShadowSize.step">1</metadata>
+  <metadata key="innerShadowSize.default">15</metadata>
+  <metadata key="innerShadowSize.min">0</metadata>
+  <metadata key="innerShadowSize.max">255</metadata>
+  <metadata key="innerShadowSize.section">Effects</metadata>
   <metadata key="textFont.user_visible">false</metadata>
   <metadata key="textSize.user_visible">false</metadata>
   <property name="labelTextFont" get="string" set="string"/>
