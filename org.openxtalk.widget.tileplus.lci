@@ -12,8 +12,11 @@ import module org.openxtalk.widget.tileplus
   use com.livecode.type
   use com.livecode.math
   use com.livecode.engine
+<<<<<<< Updated upstream
   handler OnSave(out rProperties as Array) returns optional any
   handler OnLoad(in pProperties as Array) returns optional any
+=======
+>>>>>>> Stashed changes
   handler onCreate() returns optional any
   handler OnPaint() returns optional any
   handler setTileLabel(in pColor as String) returns nothing
